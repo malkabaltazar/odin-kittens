@@ -1,0 +1,8 @@
+<% provide(:url, kitten_path(@kitten)) %>
+<% provide(:method, 'patch') %>
+<h1>Edit Kitten</h1>
+
+<%= render 'form' %>
+
+<%= link_to "<< Back to Kitten", kitten_path(@kitten) %>
+<%= link_to "Delete kitten", kitten_path(@kitten), method: 'delete' %>

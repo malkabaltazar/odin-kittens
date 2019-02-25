@@ -1,0 +1,15 @@
+<%= form_for :kitten, url: yield(:url), method: yield(:method) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :age %>
+  <%= f.select(:age, @age) %>
+
+  <%= f.label :cuteness %>
+  <%= f.select(:cuteness, @cuteness) %>
+
+  <%= f.label :softness %>
+  <%= f.select(:softness, @softness) %>
+
+  <%= f.submit "Submit" %>
+<% end %>
